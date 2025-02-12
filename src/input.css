@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Warna scrollbar untuk light mode */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Warna thumb scrollbar */
+    border-radius: 4px;
+}
+
+/* Scrollbar untuk dark mode */
+.dark ::-webkit-scrollbar-track {
+    background: #1f2937; /* Tailwind 'gray-800' */
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #444d5c; /* Tailwind 'gray-700' */
+}
+
+/* Tombol atas dan bawah pada scrollbar */
+::-webkit-scrollbar-button {
+    background: #ccc; /* Warna tombol di light mode */
+    height: 12px;
+}
+
+.dark ::-webkit-scrollbar-button {
+    background: #555; /* Warna tombol di dark mode */
+}
+
+/* Hover effect pada tombol */
+::-webkit-scrollbar-button:hover {
+    background: #aaa;
+}
+
+.dark ::-webkit-scrollbar-button:hover {
+    background: #777;
+}

@@ -25,3 +25,17 @@ toggleButton.addEventListener("click", () => {
         sunIcon.classList.remove("hidden");
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+            navbar.classList.add("shadow-lg", "py-2"); // Tambahkan shadow besar dan kecilkan navbar
+            navbar.classList.remove("shadow-sm", "lg:py-6");
+        } else if (window.scrollY === 0) {
+            navbar.classList.add("lg:py-6");
+            navbar.classList.remove("shadow-md", "shadow-lg"); // Kembalikan ke ukuran awal
+        }
+    });
+});

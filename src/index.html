@@ -12,12 +12,15 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+
+        <!-- Icons -->
+        <script src="https://kit.fontawesome.com/a39182c187.js" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body class="bg-white dark:bg-gray-900">
         <!-- Navbar -->
-        <header class="bg-white py-4 dark:bg-black">
-            <div class="container px-2 mx-auto flex justify-between items-center">
-                <h1 class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 dark:text-white">Child Fall Detection</h1>
+        <header id="navbar" class="bg-white py-2 sm:py-4 lg:py-6 dark:bg-gray-900 shadow-sm fixed top-0 left-0 z-50 w-full transition-all duration-300">
+            <div class="container px-4 md:px-2 mx-auto flex justify-between items-center">
+                <h1 class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700 dark:text-white">Child Fall Detection</h1>
                 <button id="dark-mode-toggle" class="px-4 py-2 text-dark dark:text-white focus:outline-none">
                     <svg id="sun-icon" class="w-6 h-6 hidden dark:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
                         <path
@@ -35,6 +38,53 @@
                 </button>
             </div>
         </header>
+
+        <!-- Main -->
+        <section class="mt-4 md:mt-6 bg-white dark:bg-gray-900">
+            <div class="flex flex-col lg:flex-row items-center justify-center min-h-screen p-4 mx-8">
+                <!-- Video Stream -->
+                <div class="px-2 w-full lg:w-3/5 bg-black rounded-lg overflow-hidden">
+                    <video id="video-stream" class="w-full h-auto"></video>
+                </div>
+
+                <!-- Hasil Deteksi -->
+                <div class="w-full lg:w-2/5 mt-4 lg:mt-0 lg:ml-4 flex flex-col items-center">
+                    <div class="w-full p-4 bg-gray-50 dark:bg-gray-800 rounded-lg ring-1 ring-gray-300 dark:ring-0">
+                        <h2 class="text-lg font-bold text-gray-800 dark:text-white">Hasil Deteksi</h2>
+                        <div id="detection-result" class="mt-2 text-gray-700">
+                            <!-- Hasil deteksi dari API akan dimasukkan di sini -->
+                            <p class="text-sm italic text-gray-500">Menunggu hasil deteksi...</p>
+                        </div>
+                    </div>
+
+                    <div class="w-full p-4 mt-2 md:m-4 bg-red-700 dark:bg-red-800 rounded-lg ring-1 ring-gray-300 dark:ring-0">
+                        <h1 class="text-lg font-bold text-gray-50 text-center">Bahaya!</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 py-4">
+            <div class="container grid grid-cols-1 lg:grid-cols-3 gap-3 mx-auto my-8 py-8 text-gray-50">
+                <div class="">
+                    <h1 class="py-2">Child Fall Detection</h1>
+                    <p class="text-sm">Urna sem id elit scelerisque lorem proin a nascetur iaculis feugiat maecenas dis dignissim rhoncus habitant felis</p>
+                </div>
+                <div class="">
+                    <h1 class="py-2">Child Fall Detection</h1>
+                    <p class="text-sm">Urna sem id elit scelerisque lorem proin a nascetur iaculis feugiat maecenas dis dignissim rhoncus habitant felis</p>
+                </div>
+                <div class="">
+                    <h1 class="py-2">Child Fall Detection</h1>
+                    <p class="text-sm">Urna sem id elit scelerisque lorem proin a nascetur iaculis feugiat maecenas dis dignissim rhoncus habitant felis</p>
+                </div>
+            </div>
+            <div class="container mx-auto my-4 lg:mt-12 text-center">
+                <p class="mt-2 text-gray-200 px-4 md:px-2">Made with <i class="fa-solid fa-heart text-red-600 animate-bounce"> </i> by Andri Rahmadani, Henny Kartika, M. Kaspul Anwar, M. Qalby</p>
+                <p class="text-sm mt-2 text-gray-500">&copy; 2025 CFD. All Rights Reserved.</p>
+            </div>
+        </footer>
     </body>
     <script src="./script.js"></script>
 </html>
