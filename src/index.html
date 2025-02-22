@@ -15,19 +15,24 @@
 
         <!-- Icons -->
         <script src="https://kit.fontawesome.com/a39182c187.js" crossorigin="anonymous"></script>
+
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+
+        <!-- Daisy UI -->
+        <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
     </head>
     <body class="bg-white dark:bg-gray-900">
         <!-- Navbar -->
         <header id="navbar" class="bg-white py-2 sm:py-4 lg:py-6 dark:bg-gray-900 shadow-sm fixed top-0 left-0 z-50 w-full transition-all duration-300">
             <div class="container px-4 md:px-2 mx-auto flex justify-between items-center">
-                <h1 class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700 dark:text-white">Child Fall Detection</h1>
+                <h1 class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 dark:text-white">Child Fall Detection</h1>
                 <button id="dark-mode-toggle" class="px-4 py-2 text-dark dark:text-white focus:outline-none">
                     <svg id="sun-icon" class="w-6 h-6 hidden dark:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
                         <path
                             d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
                         />
                     </svg>
-                    <svg id="moon-icon" class="w-6 h-6 dark:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <svg id="moon-icon" class="w-6 h-6 dark:hidden text-gray-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
                         <path
                             d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"
                         />
@@ -40,26 +45,22 @@
         </header>
 
         <!-- Main -->
-        <section class="mt-4 md:mt-6 bg-white dark:bg-gray-900">
-            <div class="flex flex-col lg:flex-row items-center justify-center min-h-screen py-4 mx-2 lg:mx-8">
-                <!-- Video Stream -->
-                <div class="px-2 w-full lg:w-3/5 bg-black rounded-lg overflow-hidden">
-                    <video id="video-stream" class="w-full h-auto"></video>
+        <section class="md:mt-6 lg:pt-10 lg:pb-2 bg-white dark:bg-gray-900">
+            <div class="flex flex-col items-center justify-center min-h-screen mx-2 px-4 md:px-6 lg:px-0 lg:mx-8">
+                <!-- <div class="w-full lg:w-2/3 p-4 mt-2 m-4 bg-blue-700 dark:bg-blue-800 rounded-lg ring-1 ring-gray-300 dark:ring-0">
+                    <h1 class="text-lg font-bold text-gray-50 text-center">Selalu awasi anak Anda!!!</h1>
+                </div> -->
+
+                <div role="alert" class="alert flex flex-row text-sm lg:text-md font-bold bg-gray-600 dark:bg-gray-700 border-0 text-white dark:text-gray-300 w-full lg:w-2/3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-6 w-6 shrink-0 stroke-current">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Selalu awasi anak Anda !!!</span>
                 </div>
 
-                <!-- Hasil Deteksi -->
-                <div class="w-full lg:w-2/5 mt-4 lg:mt-0 lg:ml-4 flex flex-col items-center">
-                    <div class="w-full p-4 bg-gray-50 dark:bg-gray-800 rounded-lg ring-1 ring-gray-300 dark:ring-0">
-                        <h2 class="text-xl font-bold text-gray-800 dark:text-white">Hasil Deteksi</h2>
-                        <div id="detection-result" class="mt-2 text-gray-700">
-                            <!-- Hasil deteksi dari API akan dimasukkan di sini -->
-                            <p class="text-sm italic text-gray-500">Menunggu hasil deteksi...</p>
-                        </div>
-                    </div>
-
-                    <div class="w-full p-4 mt-2 md:m-4 bg-red-700 dark:bg-red-800 rounded-lg ring-1 ring-gray-300 dark:ring-0">
-                        <h1 class="text-lg font-bold text-gray-50 text-center">Bahaya!!! Anak anda akan terjatuh</h1>
-                    </div>
+                <!-- Video Stream -->
+                <div class="px-4 m-4 w-full lg:w-2/3 bg-black rounded-lg overflow-hidden">
+                    <video id="video-stream" class="w-full h-auto"></video>
                 </div>
             </div>
         </section>
@@ -67,56 +68,72 @@
         <!-- Footer -->
         <footer class="bg-gray-800 dark:bg-gray-900 py-4">
             <div class="container flex flex-col lg:flex-row mx-auto px-4 my-6 py-4 text-gray-50">
-                <div class="w-full lg:w-5/12 mr-2 mb-6 lg:pr-20 text-center lg:text-left">
+                <div class="w-full lg:w-6/12 mr-2 mb-6 lg:pr-20 text-center lg:text-left">
                     <h1 class="py-2 text-3xl font-bold mb-2">Child Fall Detection</h1>
                     <p class="text-sm text-gray-300">
                         Urna sem id elit scelerisque lorem proin a nascetur iaculis feugiat maecenas dis dignissim rhoncus habitant felis Volutpat morbi taciti diam tellus nibh imperdiet iaculis parturient laoreet ornare potenti at netus porta ad
-                        adipiscing
                     </p>
                 </div>
-                <div class="w-full lg:w-4/12 mr-2 mb-6 text-center lg:text-left">
-                    <h1 class="py-2 text-lg font-bold mb-2">Hasil Kolaborasi</h1>
-                    <div class="container flex flex-col items-center lg:items-start">
-                        <div class="container bg-gray-700 dark:bg-gray-800 w-fit flex flex-row rounded-lg p-4 mb-4 items-center">
-                            <img src="./img/ulm.png" alt="ULM" class="w-10 h-10 p-1 mr-2 rounded-md bg-white" />
-                            <div>
-                                <h1 class="text-md font-bold">Universitas Lambung Mangkurat</h1>
-                                <p class="text-xs text-left">Prodi Teknologi Informasi</p>
+
+                <div class="flex flex-col md:flex-row w-full lg:w-6/12">
+                    <div class="w-full lg:w-7/12 mr-2 mb-6 text-center lg:text-left">
+                        <h1 class="py-2 text-lg font-bold mb-2">Hasil Kolaborasi</h1>
+                        <div class="container flex flex-col items-center lg:items-start">
+                            <div class="container bg-gray-700 dark:bg-gray-800 w-fit flex flex-row rounded-lg p-4 mb-4 items-center">
+                                <img src="./img/ulm.png" alt="ULM" class="w-10 h-10 p-1 mr-2 rounded-md bg-white" />
+                                <div>
+                                    <h1 class="text-sm font-bold">Universitas Lambung Mangkurat</h1>
+                                    <p class="text-xs text-left">Prodi Teknologi Informasi</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="container bg-gray-700 dark:bg-gray-800 w-fit flex flex-row rounded-lg p-4 items-center">
-                            <img src="./img/ti.png" alt="ULM" class="w-10 h-10 p-1 mr-2 rounded-md bg-white" />
-                            <div>
-                                <h1 class="text-md font-bold">Universitas Islam Negeri Antasari</h1>
-                                <p class="text-xs text-left">Prodi Teknologi Informasi</p>
+                            <div class="container bg-gray-700 dark:bg-gray-800 w-fit flex flex-row rounded-lg p-4 items-center">
+                                <img src="./img/ti.png" alt="ULM" class="w-10 h-10 p-1 mr-2 rounded-md bg-white" />
+                                <div>
+                                    <h1 class="text-sm md:text-md font-bold">Universitas Islam Negeri Antasari</h1>
+                                    <p class="text-xs text-left">Prodi Teknologi Informasi</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="w-full lg:w-3/12 mr-2 text-center lg:text-left">
-                    <h1 class="py-2 text-lg font-bold mb-2">Kontak kami</h1>
-                    <p class="text-sm mb-2 text-gray-400">
-                        <a href="https://www.instagram.com/andri_rahmadani_/"><i class="fa-brands fa-instagram mr-2"></i> @andri_rahmadani_</a>
-                    </p>
-                    <p class="text-sm mb-2 text-gray-400">
-                        <a href=""><i class="fa-brands fa-instagram mr-2"></i> @hennyktika</a>
-                    </p>
-                    <p class="text-sm mb-2 text-gray-400">
-                        <a href=""><i class="fa-brands fa-instagram mr-2"></i> @mkasplanwar</a>
-                    </p>
-                    <p class="text-sm mb-2 text-gray-400">
-                        <a href=""><i class="fa-brands fa-instagram mr-2"></i> @obyyyy_0ne</a>
-                    </p>
-                    <p class="text-sm mb-2 text-gray-400">
-                        <a href="https://www.instagram.com/obyyyy_0ne/"><i class="fa-brands fa-instagram mr-2"></i> @obyyyy_0ne</a>
-                    </p>
+                    <div class="w-full lg:w-5/12 mr-2 text-center lg:text-left">
+                        <h1 class="py-2 text-lg font-bold mb-2">Kontak kami</h1>
+                        <p class="text-sm mb-2 text-gray-400">
+                            <a href="https://www.instagram.com/andri_rahmadani_/"><i class="fa-brands fa-instagram mr-2"></i> @andri_rahmadani_</a>
+                        </p>
+                        <p class="text-sm mb-2 text-gray-400">
+                            <a href="https://www.instagram.com/hennyktika/"><i class="fa-brands fa-instagram mr-2"></i> @hennyktika</a>
+                        </p>
+                        <p class="text-sm mb-2 text-gray-400">
+                            <a href="https://www.instagram.com/mkasplanwar/"><i class="fa-brands fa-instagram mr-2"></i> @mkasplanwar</a>
+                        </p>
+                        <p class="text-sm mb-2 text-gray-400">
+                            <a href="https://www.instagram.com/m_panpann/"><i class="fa-brands fa-instagram mr-2"></i> @m_panpann</a>
+                        </p>
+                        <p class="text-sm mb-2 text-gray-400">
+                            <a href="https://www.instagram.com/obyyyy_0ne/"><i class="fa-brands fa-instagram mr-2"></i> @obyyyy_0ne</a>
+                        </p>
+                    </div>
                 </div>
             </div>
+
             <div class="container mx-auto my-4 lg:mt-12 text-center">
                 <p class="mt-2 text-gray-200 px-4 md:px-2">Made with <i class="fa-solid fa-heart text-red-600 animate-bounce"> </i> by Andri Rahmadani, Henny Kartika, M. Kaspul Anwar, M. Qalby</p>
                 <p class="text-sm mt-2 text-gray-400">&copy; 2025 CFD. All Rights Reserved.</p>
             </div>
         </footer>
+
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_2" class="modal">
+            <div class="modal-box bg-red-600 dark:bg-red-800 text-white">
+                <h3 class="text-lg font-bold text-center">
+                    <i class="fa-solid fa-triangle-exclamation text-3xl"></i>
+                </h3>
+                <p class="py-4 text-center">Anak anda baru saja terjatuh, segera cek keadaannya!</p>
+            </div>
+            <form method="dialog" class="modal-backdrop bg-gray-800 bg-opacity-60 dark:bg-gray-900 dark:bg-opacity-60">
+                <button>close</button>
+            </form>
+        </dialog>
     </body>
     <script src="./script.js"></script>
 </html>

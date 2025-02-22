@@ -39,3 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("my_modal_2").showModal();
+});
