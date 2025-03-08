@@ -1,2 +1,6 @@
 env/
 env/*
+*.pyc 
+*.mp4 
+*.exe 
+*.jpg 
